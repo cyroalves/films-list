@@ -26,7 +26,6 @@ export class SearchForm extends Component<Props, MovieState> {
 
     render() {
         return (
-
             <SearchContainer >
                 <IconButton >
                     <AiOutlineSearch size={22} />

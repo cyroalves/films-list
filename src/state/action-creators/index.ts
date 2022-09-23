@@ -2,6 +2,7 @@ import { ActionType } from "../action-types"
 import { Dispatch }  from "redux"
 import { Action } from "../actions/index"
 import axios from "axios"
+import { useDebouncedCallback } from "use-debounce";
 
 export const searchMovie = (movie: string) => {  
   console.log("teste")
@@ -13,8 +14,8 @@ export const searchMovie = (movie: string) => {
 }
 };
 
-export const fetchMovies = (text: string) => {
 
+export const fetchMovies = (text: string) => {
   const searchWithQueryURL = `${process.env.REACT_APP_SEARCH}?api_key=${process.env.REACT_APP_API_KEY}&query=${text}`
   return (dispatch: Dispatch<Action>) => {
   axios
