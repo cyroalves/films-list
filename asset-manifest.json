@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/films-list/static/css/main.e6c13ad2.css",
+    "main.js": "/films-list/static/js/main.f307ae1e.js",
+    "static/media/image-not-found.png": "/films-list/static/media/image-not-found.c41c47527146be7a55a9.png",
+    "index.html": "/films-list/index.html",
+    "main.e6c13ad2.css.map": "/films-list/static/css/main.e6c13ad2.css.map",
+    "main.f307ae1e.js.map": "/films-list/static/js/main.f307ae1e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.f307ae1e.js"
+  ]
+}
