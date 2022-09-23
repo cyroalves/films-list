@@ -1,4 +1,4 @@
-# Teste Collection
+# Filmes List
 
 ### Tecnologias utilizadas:
 
