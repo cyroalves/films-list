@@ -3,12 +3,13 @@ import { IconButton, SearchContainer, SearchInput } from './styles'
 import { AiOutlineSearch, AiOutlineClose } from 'react-icons/ai';
 import { connect } from 'react-redux';
 import { searchMovie, fetchMovies } from '../../state/action-creators';
-import { Link, Navigate, Route } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 
 type Props = {
     searchMovie: (movie: MovieState | any) => void
     fetchMovies: (movie: MovieState | any) => void
-    states: MovieState
+    states: MovieState,
+    navigate: any
 }
 
 export class SearchForm extends Component<Props, MovieState> {
@@ -20,18 +21,14 @@ export class SearchForm extends Component<Props, MovieState> {
     onSubmit = async (e: React.SyntheticEvent) => {
         e.preventDefault();
         this.props.fetchMovies(this.props.states.search);
-        console.log("teste", this.props)
+        this.props.navigate("/search");
     };
-
-    _toogleSearch = () => {
-
-    }
-
 
     render() {
         return (
-            <SearchContainer>
-                <IconButton>
+
+            <SearchContainer >
+                <IconButton >
                     <AiOutlineSearch size={22} />
                 </IconButton>
                 <form id="searchForm" onSubmit={this.onSubmit} >
